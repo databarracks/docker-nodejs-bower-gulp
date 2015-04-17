@@ -10,7 +10,9 @@ ENV LAST_UPDATE=2015-04-16
 ENV DEBIAN_FRONTEND noninteractive
 
 #install bower and gulp
-RUN npm install -g bower gulp
+RUN npm install -g bower gulp && \
+    cd /app && \
+    npm install gulp
 
 # default dir for app
 WORKDIR /app/
