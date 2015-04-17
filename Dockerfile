@@ -5,16 +5,16 @@ FROM neo9polska/nodejs:latest
 MAINTAINER Neo9 Polska <labs@neo9.pl>
 
 # last update, to invalidate cache if needed
-ENV LAST_UPDATE=2015-04-16
+ENV LAST_UPDATE=2015-04-17
 
 ENV DEBIAN_FRONTEND noninteractive
+
+RUN mkdir /app
 
 #install bower and gulp
 RUN npm install -g bower gulp && \
     cd /app && \
     npm install gulp
-
-RUN mkdir /app
 
 # default dir for app
 WORKDIR /app/
