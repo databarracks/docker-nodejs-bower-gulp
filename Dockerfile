@@ -14,6 +14,8 @@ RUN npm install -g bower gulp && \
     cd /app && \
     npm install gulp
 
+RUN mkdir /app
+
 # default dir for app
 WORKDIR /app/
 
