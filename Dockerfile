@@ -9,11 +9,11 @@ ENV LAST_UPDATE=2015-04-17
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN mkdir /app
+# create app folder and switch to it
+RUN mkdir /app && cd /app
 
-#install bower and gulp
+#install bower and gulp, and local gulp
 RUN npm install -g bower gulp && \
-    cd /app && \
     npm install gulp
 
 # default dir for app
