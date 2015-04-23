@@ -12,6 +12,9 @@ ENV DEBIAN_FRONTEND noninteractive
 # create app folder and switch to it
 RUN mkdir /app && cd /app
 
+# install git for bower dependencies
+RUN apt-get update && apt-get install git
+
 #install bower and gulp, and local gulp
 RUN npm install -g bower gulp && \
     npm install gulp
