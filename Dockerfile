@@ -5,9 +5,12 @@ FROM neo9polska/nodejs:latest
 MAINTAINER Neo9 Polska <labs@neo9.pl>
 
 # last update, to invalidate cache if needed
-ENV LAST_UPDATE=2015-04-17
+ENV LAST_UPDATE 2015-05-07
 
 ENV DEBIAN_FRONTEND noninteractive
+
+# node-gyp needs python 2 to install & compile some dependencies
+ENV PYTHON python2
 
 # create app folder and switch to it
 RUN mkdir /app
