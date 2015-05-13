@@ -15,8 +15,8 @@ ENV PYTHON python2
 # create app folder and switch to it
 RUN mkdir /app
 
-# install git for bower dependencies
-RUN apt-get -yq update && apt-get -yq install git
+# install git for bower dependencies and libfontconfig as phantomjs requirement
+RUN apt-get -yq update && apt-get -yq install git && apt-get install -yq libfontconfig
 
 #install bower and gulp, and local gulp
 RUN npm install -g bower gulp
